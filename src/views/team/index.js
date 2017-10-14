@@ -28,6 +28,7 @@ type Props = {
   teamName: string,
   players: Array<Player>,
   addPlayer: () => any,
+  addItem: () => any,
   changeTeam: (id: string) => any,
   value: string,
   onChange: (value: string) => any,
@@ -38,6 +39,7 @@ const TeamView = ({
   teamName,
   players,
   addPlayer,
+  addItem,
   changeTeam,
   navigateToOtherTeam,
   value,
@@ -45,7 +47,7 @@ const TeamView = ({
 }: Props) => (
     <Container>
       <Button onClick={navigateToOtherTeam}>Login</Button>
-      <Header as='h1'>Lista de Jugadores (Equipo {teamName})</Header>
+      <Header as='h1'>Product Market (Team {teamName})</Header>
       <Form>
         <Form.Input
           label='Nombre'
@@ -54,8 +56,7 @@ const TeamView = ({
           onChange={onChange}
         />
       </Form>
-      <Button type='submit' onClick={addPlayer}>Agregar</Button>
-
+  
       <Item.Group divided>
 
         <Item>
@@ -73,7 +74,7 @@ const TeamView = ({
               <Label>iPad Air</Label>
               <Label>iPhone 5</Label>
               <Label icon='globe' content='MultiLanguage' />
-              <Button animated='vertical' size='mini'>
+              <Button animated='vertical' size='mini' type='submit' onClick={addItem}>
                 <Button.Content hidden>Shop</Button.Content>
                 <Button.Content visible>
                   <Icon name='shop' />
@@ -129,7 +130,7 @@ const TeamView = ({
           </Item.Content>
         </Item>
       </Item.Group>
-
+      <Header as='h1'>Shooping Cart</Header>
       <List divided verticalAlign='middle'>
         {
           players.map(({ id, name }) => (

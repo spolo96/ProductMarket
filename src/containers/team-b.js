@@ -18,6 +18,7 @@ import autobind from '../utils/autobind';
 
 import {
   addPlayer,
+  addItem,
   switchPlayerTeam,
 } from '../actions';
 
@@ -37,6 +38,7 @@ const mapStateToProps: MapStateToProps<Props> = (state: State) => ({
 
 const mapDispatchToProps: MapDispatchToProps<Props> = (dispatch: Dispatch) => ({
   addPlayer: bindActionCreators(addPlayer, dispatch),
+  addItem: bindActionCreators(addItem,dispatch),
   switchPlayerTeam: bindActionCreators(switchPlayerTeam, dispatch),
 });
 
@@ -59,6 +61,7 @@ class TeamBContainer extends Component {
         {...this.props}
         {...this.state}
         addPlayer={this.addPlayer}
+        addItem={this.addItem}
         changeTeam={this.changeTeam}
         onChange={this.onChange}
         navigateToOtherTeam={this.navigateToOtherTeam}
@@ -79,6 +82,12 @@ class TeamBContainer extends Component {
     this.props.addPlayer(this.state.value, 'b');
     this.setState({ value: '' });
   }
+
+  addItem() {
+    this.props.addItem(this.state.value, 'b');
+    this.setState({value: ''});
+  }
+
 
   navigateToOtherTeam() {
     this.props.history.push('/a');

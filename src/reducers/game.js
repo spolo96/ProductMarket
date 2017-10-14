@@ -39,6 +39,33 @@ export default function reducer(state: GameState = initialState, action: Action 
       };
     }
 
+    case 'ADD_ITEM': {
+      const {
+        name,
+        team,
+      } = action;
+
+      const id = name; // uuid v4
+
+      return {
+        ...state,
+        players: {
+          ...state.players,
+          [id]: {
+            id,
+            name,
+          },
+        },
+        association: {
+          ...state.association,
+          [team]: [
+            ...state.association[team],
+            id,
+          ],
+        },
+      };
+    }
+
     case 'SWITCH_PLAYER_TEAM': {
       const { id } = action;
 
