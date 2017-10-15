@@ -12,7 +12,7 @@ import type {
   State,
 } from '../types';
 
-import TeamView from '../views/team';
+import TeamView from '../views/home';
 
 import autobind from '../utils/autobind';
 

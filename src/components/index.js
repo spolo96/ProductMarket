@@ -13,6 +13,8 @@ export {
   Item, 
   Label,
   Checkbox,
+  Input,
+  Dropdown,
 } from 'semantic-ui-react';
 
 export { default as Navbar } from './navbar';

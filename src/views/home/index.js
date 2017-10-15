@@ -46,19 +46,8 @@ const TeamView = ({
   onChange,
 }: Props) => (
     <Container>
-      <Button onClick={navigateToOtherTeam}>Login</Button>
-      <Header as='h1'>Product Market (Team {teamName})</Header>
-      <Form>
-        <Form.Input
-          label='Nombre'
-          placeholder='Nombre...'
-          value={value}
-          onChange={onChange}
-        />
-      </Form>
-  
+      <Header as='h1'>Product List</Header>
       <Item.Group divided>
-
         <Item>
           <Item.Image src={apple} />
           <Item.Content>

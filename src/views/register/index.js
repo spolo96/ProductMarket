@@ -23,11 +23,17 @@ import {
   Item,
   Label,
   Checkbox,
+  Input,
 } from '../../components';
 
 type Props = {
  
 };
+
+const options = [
+  { key: 'm', text: 'Male', value: 'male' },
+  { key: 'f', text: 'Female', value: 'female' },
+]
 
 const RegisterView = ({
 
@@ -52,6 +58,19 @@ const RegisterView = ({
         <input placeholder='amason, wpolo, etc...' />
       </Form.Field>
       <Form.Field>
+      <Form.Select label='Gender' options={options} placeholder='Gender' />
+        </Form.Field>
+      <Form.Field>
+      <Form.Group inline>
+      <Form.Field>
+        <label>Credit Card Number</label>
+        <Input placeholder='(xxxx-xxxx-xxxx)' />
+      </Form.Field>
+      <Form.Field>
+        <label>Expiration Date</label>
+        <Input placeholder='xxx' />
+      </Form.Field>
+    </Form.Group>
         <Checkbox label='I agree to the Terms and Conditions' />
       </Form.Field>
       <Button type='submit'>Confirm</Button>
