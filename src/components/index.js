@@ -12,4 +12,7 @@ export {
   Image,
   Item, 
   Label,
+  Checkbox,
 } from 'semantic-ui-react';
+
+export { default as Navbar } from './navbar';

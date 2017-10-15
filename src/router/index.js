@@ -19,6 +19,9 @@ import type {
 
 import TeamAContainer from '../containers/team-a';
 import TeamBContainer from '../containers/team-b';
+import RegisterContainer from '../containers/register';
+
+import { Navbar } from '../components';
 
 type Props = {
 };
@@ -35,10 +38,14 @@ class RootRouter extends Component {
   render() {
     return (
       <Router>
+         <div className='app'>
+         <Navbar/>
         <Switch>
           <Route exact path='/a' component={TeamAContainer} />
           <Route exact path='/b' component={TeamBContainer} />
+          <Route exact path='/register' component={RegisterContainer} />
         </Switch>
+        </div>
       </Router>
     );
   }
