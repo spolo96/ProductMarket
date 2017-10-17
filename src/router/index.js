@@ -19,6 +19,7 @@ import type {
 
 import TeamAContainer from '../containers/team-a';
 import RegisterContainer from '../containers/register';
+import MyMarketContainer from '../containers/mymarket';
 
 import { Navbar } from '../components';
 
@@ -42,6 +43,7 @@ class RootRouter extends Component {
         <Switch>
           <Route exact path='/home' component={TeamAContainer} />
           <Route exact path='/register' component={RegisterContainer} />
+          <Route exact path='/mymarket' component={MyMarketContainer} />
         </Switch>
         </div>
       </Router>

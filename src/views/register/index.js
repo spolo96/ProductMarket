@@ -75,7 +75,6 @@ const RegisterView = ({
       </Form.Field>
       <Button type='submit'>Confirm</Button>
     </Form>
-
     </Container>
   );
 

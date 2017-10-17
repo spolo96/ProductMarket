@@ -15,6 +15,8 @@ export {
   Checkbox,
   Input,
   Dropdown,
+  Table,
+  Rating,
 } from 'semantic-ui-react';
 
 export { default as Navbar } from './navbar';
