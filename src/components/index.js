@@ -17,6 +17,7 @@ export {
   Dropdown,
   Table,
   Rating,
+  Card,
 } from 'semantic-ui-react';
 
 export { default as Navbar } from './navbar';
