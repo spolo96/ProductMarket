@@ -6,10 +6,10 @@ export const addPlayer = (name: string, team: 'a' | 'b') => ({
   team,
 });
 
-export const addItem = (name: string, team: 'a'|'b') => ({
-  type: 'ADD_ITEM',
+export const addProduct = (name: string, isInCart: 'yes'|'no') => ({
+  type: 'ADD_PRODUCT',
   name,
-  team,
+  isInCart,
 });
 
 export const switchPlayerTeam = (id: string) => ({

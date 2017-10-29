@@ -23,6 +23,12 @@ export type Player = {
   name: string,
 };
 
+export type Product = {
+  id: string,
+  name: string,
+  price: number,
+};
+
 // State
 export type GameState = {
   players: {
@@ -34,13 +40,30 @@ export type GameState = {
   },
 };
 
+export type MarketState = {
+  products: {
+    [primaryKey: string]: Product
+  },
+  association: {
+    yes: Array<string>,
+    no: Array<string>,
+  },
+};
+
 export type State = {
   game: GameState,
+  market: MarketState,
 };
 
 // Action Types
 export type LogoutAction = {
   type: 'LOGOUT',
+};
+
+export type AddProductAction = {
+  type: 'ADD_PRODUCT',
+  name: string,
+  isInCart: 'yes' | 'no',
 };
 
 export type AuthReadyAction = {
@@ -67,6 +90,7 @@ export type Action =
   | AuthReadyAction
   | NoopAction
   | AddPlayerAction;
+  | AddProductAction;
 
 // Redux Associated Types
 export type GetState = () => State;
