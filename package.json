@@ -58,7 +58,7 @@
   "dependencies": {
     "bluebird": "^3.5.0",
     "classnames": "^2.2.5",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.19",
     "node-sass-chokidar": "^0.0.3",
     "normalize.css": "^7.0.0",
     "qs": "^6.4.0",
